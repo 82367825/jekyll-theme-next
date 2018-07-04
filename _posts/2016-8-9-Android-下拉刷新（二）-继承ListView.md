@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Android-下拉刷新-继承ListView
+title: Android-下拉刷新（二）-继承ListView
 categories: [Android]
 description: 通过继承ListView实现下拉刷新效果
 tags: 下拉刷新
