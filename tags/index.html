@@ -1,4 +1,98 @@
----
-layout: page
-type: tags
----
+<!-- -&#45;&#45;-->
+<!--layout: page-->
+<!--type: tags-->
+<!-- -&#45;&#45;-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8;"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="robots" content="all" />
+    <meta name="robots" content="index,follow"/>
+</head>
+<body>
+<p>
+    测试页面
+</p>
+<button onclick="executeActionInClient()">title</button>
+<button onclick="executeActionInClient()">closeWebView</button>
+
+<script type="text/plain" src="http://www.qq.com/404/search_children.js"
+        charset="utf-8">
+    function executeActionInClient(var type, var json) {
+         if (type == 0) {
+            var json0 = "{
+                          type:\"AppBase\",
+                          identifier:\"1\",
+                          method:\"title\",
+                          params:{
+                             position:\"1\",
+                             title:\"提示\"
+                          }
+                         }";
+            PPXJsInterface.executeActionInClient(json0);              
+         } else if (type == 1) {
+            var json1 = "{
+                          type:\"AppBase\",
+                          identifier:\"1\",
+                          method:\"closeWebView\"
+                          }";
+            PPXJsInterface.executeActionInClient(json1);   
+         } else if (type == 2) {
+            var json2 = "{
+                          type:\"Share\",
+                          identifier:\"1\",
+                          method:\"shareInThirdPart\",
+                          params:{
+                              share_type:\"1\",
+                              share_image:\"base64_string\",
+                              share_title:\"PPX\",
+                              share_content:\"PPX content\",
+                              share_url:\"https://www.baidu.com\"
+                            }
+                          }";
+            PPXJsInterface.executeActionInClient(json2);  
+         } else if (type == 3) {
+            var json3 = "{
+                          type:\"Share\",
+                          identifier:\"1\",
+                          method:\"shareAudioInThirdPart\",
+                          params:{
+                               share_audio_cid:\"123\",
+                               share_audio_title:\"title\",
+                            }
+                          }";
+            PPXJsInterface.executeActionInClient(json3);             
+         } else if (type == 4) {
+            var json4 = "{
+                          type:\"Share\",
+                          identifier:\"1\",
+                          method:\"isAudioShared\",
+                          params:{
+                               share_audio_cid:\"123\"
+                            }
+                          }";
+            PPXJsInterface.executeActionInClient(json4);               
+         }
+    }
+    function executeActionInWeb(var json) {
+         var jsonObj = JSON.parse(json);
+         if (jsonObj.method == "notifyClickTop") {
+              alert("executeActionInWeb -> notifyClickTop");
+         } else if (jsonObj.method == "notifyClickTopRight") {
+              alert("executeActionInWeb -> notifyClickTopRight");
+         }
+    }
+    function callbackInWeb(var json) {
+         var jsonObj = JSON.parse(json); 
+         if (jsonObj.method == "shareInThirdPart") {
+              alert("callbackInWeb -> shareInThirdPart");
+         } else if (jsonObj.method == "shareAudioInThirdPart") {
+              alert("callbackInWeb -> shareAudioInThirdPart");
+         } else if (jsonObj.method == "isAudioShared") {
+              alert("callbackInWeb -> isAudioShared");
+         } 
+    }
+</script>
+</body>
+</html>
