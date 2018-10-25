@@ -29,6 +29,7 @@
                              title:\"提示\"
                           }
                          }";
+            window.ShrimpJsInterface.closeWebPage();
             window.ShrimpJsInterface.executeActionInClient(json0);              
          } else if (type == 1) {
             var json1 = "{
@@ -94,7 +95,7 @@
     }
 </script>
 
-<button onclick="window.ShrimpJsInterface.executeActionInClient(json0);">title</button>
+<button onclick="executeActionInClient(0)">title</button>
 <button onclick="executeActionInClient(1)">closeWebView</button>
 <button onclick="executeActionInClient(2)">shareInThirdPart</button>
 <button onclick="executeActionInClient(3)">shareAudioInThirdPart</button>
