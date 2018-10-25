@@ -9,15 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="robots" content="all" />
     <meta name="robots" content="index,follow"/>
-</head>
-<body>
-<p>
-    测试页面
-</p>
-
-
 <script type="text/plain" src="http://www.qq.com/404/search_children.js"
-        charset="utf-8">
+            charset="utf-8">
     function executeActionInClient(var type) {
          if (type == 0) {
             var json0 = "{
@@ -29,7 +22,7 @@
                              title:\"提示\"
                           }
                          }";
-            window.ShrimpJsInterface.closeWebPage();           
+            window.ShrimpJsInterface.executeActionInClient(json0);              
          } else if (type == 1) {
             var json1 = "{
                           type:\"AppBase\",
@@ -93,7 +86,12 @@
          } 
     }
 </script>
-
+    
+</head>
+<body>
+<p>
+    测试页面
+</p>
 <button onclick="executeActionInClient(0)">title</button>
 <button onclick="executeActionInClient(1)">closeWebView</button>
 <button onclick="executeActionInClient(2)">shareInThirdPart</button>
