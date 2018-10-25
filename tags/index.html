@@ -34,14 +34,14 @@
                              title:\"提示\"
                           }
                          }";
-            PPXJsInterface.executeActionInClient(json0);              
+            window.ShrimpJsInterface.executeActionInClient(json0);              
          } else if (type == 1) {
             var json1 = "{
                           type:\"AppBase\",
                           identifier:\"1\",
                           method:\"closeWebView\"
                           }";
-            PPXJsInterface.executeActionInClient(json1);   
+            window.ShrimpJsInterface.executeActionInClient(json1);   
          } else if (type == 2) {
             var json2 = "{
                           type:\"Share\",
@@ -55,7 +55,7 @@
                               share_url:\"https://www.baidu.com\"
                             }
                           }";
-            PPXJsInterface.executeActionInClient(json2);  
+            window.ShrimpJsInterface.executeActionInClient(json2);  
          } else if (type == 3) {
             var json3 = "{
                           type:\"Share\",
@@ -66,7 +66,7 @@
                                share_audio_title:\"title\",
                             }
                           }";
-            PPXJsInterface.executeActionInClient(json3);             
+            window.ShrimpJsInterface.executeActionInClient(json3);             
          } else if (type == 4) {
             var json4 = "{
                           type:\"Share\",
@@ -76,7 +76,7 @@
                                share_audio_cid:\"123\"
                             }
                           }";
-            PPXJsInterface.executeActionInClient(json4);               
+            window.ShrimpJsInterface.executeActionInClient(json4);               
          }
     }
     function executeActionInWeb(var json) {
