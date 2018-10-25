@@ -9,9 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="robots" content="all" />
     <meta name="robots" content="index,follow"/>
-<script type="text/plain" src="http://www.qq.com/404/search_children.js"
-            charset="utf-8">
-    function executeActionInClient(var type) {
+<script charset="utf-8">
+    function executeActionInClient(type) {
          if (type == 0) {
             var json0 = "{
                           type:\"AppBase\",
@@ -67,7 +66,7 @@
             window.ShrimpJsInterface.executeActionInClient(json4);               
          }
     }
-    function executeActionInWeb(var json) {
+    function executeActionInWeb(json) {
          var jsonObj = JSON.parse(json);
          if (jsonObj.method == "notifyClickTop") {
               alert("executeActionInWeb -> notifyClickTop");
@@ -75,7 +74,7 @@
               alert("executeActionInWeb -> notifyClickTopRight");
          }
     }
-    function callbackInWeb(var json) {
+    function callbackInWeb(json) {
          var jsonObj = JSON.parse(json); 
          if (jsonObj.method == "shareInThirdPart") {
               alert("callbackInWeb -> shareInThirdPart");
