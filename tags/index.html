@@ -50,7 +50,7 @@
         window.ShrimpJsInterface.executeActionInClient(json); 
     }
     
-    function executeActionInWeb() {
+    function executeActionInWeb(json) {
          var jsonObj = JSON.parse(json);
          if (jsonObj.method == "notifyClickTop") {
               alert("executeActionInWeb -> notifyClickTop");
