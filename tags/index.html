@@ -35,7 +35,7 @@
     }
     
     function executeShareAudioInThirdPart() {
-        var jsonObject={type:"Share",method:"isAudioShared",identifier:"1",params:{share_audio_cid:"",share_audio_title:""}};
+        var jsonObject={type:"Share",method:"shareAudioInThirdPart",identifier:"1",params:{share_audio_cid:"",share_audio_title:""}};
         jsonObject.params.share_audio_cid = document.getElementById("shareCid").value;
         var json = JSON.stringify(jsonObject);
         alert("executeActionInClient ->" + json);
