@@ -1,102 +1,102 @@
-<!-- -&#45;&#45;-->
-<!--layout: page-->
-<!--type: tags-->
-<!-- -&#45;&#45;-->
-<!DOCTYPE HTML>
-<html>
-<head>
-    <script charset="utf-8">
-    function executeAppBaseTitle() {
-        var jsonObject={type:"AppBase",method:"title1",identifier:"1",params:{position:"",title:""}};
-        jsonObject.params.position = document.getElementById("titlePosition").value;
-        jsonObject.params.title = document.getElementById("title").value;
-        var json = JSON.stringify(jsonObject);
-        alert("executeActionInClient ->" + json);
-        window.ShrimpJsInterface.executeActionInClient(json); 
-    }
-    
-    function executeAppBaseCloseWebView() {
-        var jsonObject={type:"AppBase",method:"closeWebView",identifier:"1"};
-        var json = JSON.stringify(jsonObject);
-        alert("executeActionInClient ->" + json);
-        window.ShrimpJsInterface.executeActionInClient(json); 
-    }
-    
-    function executeShareInThirdPart() {
-        var jsonObject={type:"Share",identifier:"1",method:"shareInThirdPart",params:{share_type:"1",share_image:"",share_title:"PPX",share_content:"PPX content",share_url:"https://www.baidu.com"}};
-        jsonObject.params.share_type = document.getElementById("shareType").value;
-        jsonObject.params.share_image = document.getElementById("shareImage").value;
-        jsonObject.params.share_title = document.getElementById("shareTitle").value;
-        jsonObject.params.share_content = document.getElementById("shareContent").value;
-        jsonObject.params.share_url = document.getElementById("shareUrl").value;
-        var json = JSON.stringify(jsonObject);
-        alert("executeActionInClient ->" + json);
-        window.ShrimpJsInterface.executeActionInClient(json); 
-    }
-    
-    function executeShareAudioInThirdPart() {
-        var jsonObject={type:"Share",method:"shareAudioInThirdPart",identifier:"1",params:{share_audio_cid:"",share_audio_title:""}};
-        jsonObject.params.share_audio_cid = document.getElementById("shareCid").value;
-        var json = JSON.stringify(jsonObject);
-        alert("executeActionInClient ->" + json);
-        window.ShrimpJsInterface.executeActionInClient(json); 
-    }
-    
-    function executeIsAudioShared() {
-        var jsonObject = {type:"Share",method:"isAudioShared",identifier:"1",params:{share_audio_cid:""}};
-        jsonObject.params.share_audio_cid = document.getElementById("isShareCid").value;
-        var json = JSON.stringify(jsonObject);
-        alert("executeActionInClient ->" + json);
-        window.ShrimpJsInterface.executeActionInClient(json); 
-    }
-    
-    function executeActionInWeb(json) {
-         var jsonObj = JSON.parse(json);
-         if (jsonObj.method == "notifyClickTop") {
-              alert("executeActionInWeb -> notifyClickTop");
-         } else if (jsonObj.method == "notifyClickTopRight") {
-              alert("executeActionInWeb -> notifyClickTopRight");
-         }
-    }
-    function callbackInWeb(json) {
-         var jsonObj = JSON.parse(json); 
-         alert("callbackInWeb" + json);
-    }
-</script>
+ ---
+layout: page
+type: tags
+ ---
+<!--<!DOCTYPE HTML>-->
+<!--<html>-->
+<!--<head>-->
+    <!--<script charset="utf-8">-->
+    <!--function executeAppBaseTitle() {-->
+        <!--var jsonObject={type:"AppBase",method:"title1",identifier:"1",params:{position:"",title:""}};-->
+        <!--jsonObject.params.position = document.getElementById("titlePosition").value;-->
+        <!--jsonObject.params.title = document.getElementById("title").value;-->
+        <!--var json = JSON.stringify(jsonObject);-->
+        <!--alert("executeActionInClient ->" + json);-->
+        <!--window.ShrimpJsInterface.executeActionInClient(json); -->
+    <!--}-->
+    <!---->
+    <!--function executeAppBaseCloseWebView() {-->
+        <!--var jsonObject={type:"AppBase",method:"closeWebView",identifier:"1"};-->
+        <!--var json = JSON.stringify(jsonObject);-->
+        <!--alert("executeActionInClient ->" + json);-->
+        <!--window.ShrimpJsInterface.executeActionInClient(json); -->
+    <!--}-->
+    <!---->
+    <!--function executeShareInThirdPart() {-->
+        <!--var jsonObject={type:"Share",identifier:"1",method:"shareInThirdPart",params:{share_type:"1",share_image:"",share_title:"PPX",share_content:"PPX content",share_url:"https://www.baidu.com"}};-->
+        <!--jsonObject.params.share_type = document.getElementById("shareType").value;-->
+        <!--jsonObject.params.share_image = document.getElementById("shareImage").value;-->
+        <!--jsonObject.params.share_title = document.getElementById("shareTitle").value;-->
+        <!--jsonObject.params.share_content = document.getElementById("shareContent").value;-->
+        <!--jsonObject.params.share_url = document.getElementById("shareUrl").value;-->
+        <!--var json = JSON.stringify(jsonObject);-->
+        <!--alert("executeActionInClient ->" + json);-->
+        <!--window.ShrimpJsInterface.executeActionInClient(json); -->
+    <!--}-->
+    <!---->
+    <!--function executeShareAudioInThirdPart() {-->
+        <!--var jsonObject={type:"Share",method:"shareAudioInThirdPart",identifier:"1",params:{share_audio_cid:"",share_audio_title:""}};-->
+        <!--jsonObject.params.share_audio_cid = document.getElementById("shareCid").value;-->
+        <!--var json = JSON.stringify(jsonObject);-->
+        <!--alert("executeActionInClient ->" + json);-->
+        <!--window.ShrimpJsInterface.executeActionInClient(json); -->
+    <!--}-->
+    <!---->
+    <!--function executeIsAudioShared() {-->
+        <!--var jsonObject = {type:"Share",method:"isAudioShared",identifier:"1",params:{share_audio_cid:""}};-->
+        <!--jsonObject.params.share_audio_cid = document.getElementById("isShareCid").value;-->
+        <!--var json = JSON.stringify(jsonObject);-->
+        <!--alert("executeActionInClient ->" + json);-->
+        <!--window.ShrimpJsInterface.executeActionInClient(json); -->
+    <!--}-->
+    <!---->
+    <!--function executeActionInWeb(json) {-->
+         <!--var jsonObj = JSON.parse(json);-->
+         <!--if (jsonObj.method == "notifyClickTop") {-->
+              <!--alert("executeActionInWeb -> notifyClickTop");-->
+         <!--} else if (jsonObj.method == "notifyClickTopRight") {-->
+              <!--alert("executeActionInWeb -> notifyClickTopRight");-->
+         <!--}-->
+    <!--}-->
+    <!--function callbackInWeb(json) {-->
+         <!--var jsonObj = JSON.parse(json); -->
+         <!--alert("callbackInWeb" + json);-->
+    <!--}-->
+<!--</script>-->
 
-</head>
-<body>
-<p>
-    测试页面
-</p>
+<!--</head>-->
+<!--<body>-->
+<!--<p>-->
+    <!--测试页面-->
+<!--</p>-->
 
 
-<br><p>关闭</p><button onclick="executeAppBaseCloseWebView()">AppBase:closeWebView</button>
+<!--<br><p>关闭</p><button onclick="executeAppBaseCloseWebView()">AppBase:closeWebView</button>-->
 
-<br>
-<p>标题内容</p><input id="title" type="text" name="title"/><p>标题位置：1中间标题 2右上角标题</p><input id="titlePosition" type="text" name="titlePosition" />
-<br>
-<button onclick="executeAppBaseTitle()">AppBase:title</button>
+<!--<br>-->
+<!--<p>标题内容</p><input id="title" type="text" name="title"/><p>标题位置：1中间标题 2右上角标题</p><input id="titlePosition" type="text" name="titlePosition" />-->
+<!--<br>-->
+<!--<button onclick="executeAppBaseTitle()">AppBase:title</button>-->
 
-<br>
-<p>分享类型 1-- 富文本，2-- 图片</p><input id="shareType" type="text" name="shareType" />
-<p>分享标题</p><input id="shareTitle" type="text" name="shareTitle" />
-<p>分享内容</p><input id="shareContent" type="text" name="v" />
-<p>分享图片：url</p><input id="shareImage" type="text" name="shareImage" />
-<p>分享链接：url</p><input id="shareUrl" type="text" name="shareUrl" />
-<br>
-<button onclick="executeShareInThirdPart()">Share:shareInThirdPart</button>
+<!--<br>-->
+<!--<p>分享类型 1&#45;&#45; 富文本，2&#45;&#45; 图片</p><input id="shareType" type="text" name="shareType" />-->
+<!--<p>分享标题</p><input id="shareTitle" type="text" name="shareTitle" />-->
+<!--<p>分享内容</p><input id="shareContent" type="text" name="v" />-->
+<!--<p>分享图片：url</p><input id="shareImage" type="text" name="shareImage" />-->
+<!--<p>分享链接：url</p><input id="shareUrl" type="text" name="shareUrl" />-->
+<!--<br>-->
+<!--<button onclick="executeShareInThirdPart()">Share:shareInThirdPart</button>-->
 
-<br>
-<p>分享语音包cid</p><input id="shareCid" type="text" name="shareCid" />
-<br><button onclick="executeShareAudioInThirdPart()">Share:shareAudioInThirdPart</button>
+<!--<br>-->
+<!--<p>分享语音包cid</p><input id="shareCid" type="text" name="shareCid" />-->
+<!--<br><button onclick="executeShareAudioInThirdPart()">Share:shareAudioInThirdPart</button>-->
 
-<br>
-<p>判断是否已经分享语音包cid</p><input id="isShareCid" type="text" name="isShareCid"/>
-<br><button onclick="executeIsAudioShared()">Share:isAudioShared</button>
+<!--<br>-->
+<!--<p>判断是否已经分享语音包cid</p><input id="isShareCid" type="text" name="isShareCid"/>-->
+<!--<br><button onclick="executeIsAudioShared()">Share:isAudioShared</button>-->
 
-<br>
-<br><a href="https://www.youtube.com/watch?v=7MFly82e46Q">跳转到视频网站</a>
+<!--<br>-->
+<!--<br><a href="https://www.youtube.com/watch?v=7MFly82e46Q">跳转到视频网站</a>-->
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
